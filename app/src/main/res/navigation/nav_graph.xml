@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/peopleFragment">
+
+    <fragment
+        android:id="@+id/addPersonFragment"
+        android:name="com.example.remindme.screens.edit.AddPersonFragment"
+        android:label="@string/add_person"
+        tools:layout="@layout/add_person_fragment" >
+        <action
+            android:id="@+id/action_addPersonFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.example.remindme.screens.people.PeopleFragment"
+        android:label="@string/people"
+        tools:layout="@layout/people_fragment">
+        <action
+            android:id="@+id/action_peopleFragment_to_addPersonFragment"
+            app:destination="@id/addPersonFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>

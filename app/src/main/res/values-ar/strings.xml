@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تذكرني</string>
+    <string name="first_name">اﻷسم اﻷول</string>
+    <string name="second_name">اﻷسم الثاني</string>
+    <string name="meeting_place">مكان الإلتقاء</string>
+    <string name="add_person">إضافة شخص</string>
+    <string name="people">الأشخاص</string>
+    <string name="meeting_date">تاريخ الإلتقاء</string>
+    <string name="meeting_time">زمن الإلتقاء</string>
+    <string name="note_hint">ملاحظة</string>
+    <string name="done_string">تم</string>
+    <string name="gender">الجنس:</string>
+    <string name="female">أنثى</string>
+    <string name="male">ذكر</string>
+    <string name="error_message">لا يمكن أن يكون فارق!</string>
+    <string name="name">عمر مكي</string>
+</resources>
