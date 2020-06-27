@@ -77,6 +77,7 @@ class AddPersonFragment : Fragment() {
         val place = dataBinding.etPlace.text.toString().trim()
         if (place == ""){
             dataBinding.etPlace.error = getString(R.string.error_message)
+            return false
         }
         val date = dataBinding.etDate.text.toString().trim()
         val note = dataBinding.etNote.text.toString().trim()
