@@ -51,7 +51,7 @@ class PeopleFragment : Fragment() {
             }else {
                 dataBinding.tvEmpty.visibility = View.GONE
                 dataBinding.peopleList.visibility = View.VISIBLE
-                adapter.data = it
+                adapter.submitList(it)
             }
         })
 
