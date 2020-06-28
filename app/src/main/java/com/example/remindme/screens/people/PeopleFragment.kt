@@ -1,6 +1,5 @@
 package com.example.remindme.screens.people
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.util.Log
 import android.view.*
