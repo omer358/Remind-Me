@@ -33,6 +33,7 @@
             android:id="@+id/et_first_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,6 +52,7 @@
             android:id="@+id/et_second_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:hint="@string/second_name" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,6 +131,7 @@
             android:layout_width="match_parent"
             android:focusableInTouchMode="false"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:hint="@string/meeting_date" />
     </com.google.android.material.textfield.TextInputLayout>
 
