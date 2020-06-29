@@ -53,6 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"
+            android:inputType="textPersonName"
             android:hint="@string/second_name" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -132,6 +133,7 @@
             android:focusableInTouchMode="false"
             android:layout_height="wrap_content"
             android:maxLines="1"
+            android:inputType="datetime"
             android:hint="@string/meeting_date" />
     </com.google.android.material.textfield.TextInputLayout>
 
