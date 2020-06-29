@@ -1,6 +1,5 @@
 package com.example.remindme
 
-import android.content.Context
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.roundToInt
@@ -18,29 +17,29 @@ fun convertDateToPassedTime(time: String): CharSequence? {
     val now = System.currentTimeMillis()
 
 
-    var rightTime:String?
+    var rightTime: String?
 
-    if (now - millis < DAY_MILLIS){
-        if (now - millis < HOUR_MILLIS){
-            if(now -millis < MINUTE_MILLIS){
+    if (now - millis < DAY_MILLIS) {
+        if (now - millis < HOUR_MILLIS) {
+            if (now - millis < MINUTE_MILLIS) {
                 rightTime = "Now"
-            }else {
+            } else {
                 val minutes = (now - millis).toDouble().roundToInt() / MINUTE_MILLIS
                 rightTime = minutes.toString() + "M"
                 println("less than hour $rightTime")
             }
-        } else{
-            val minutes: Int = ((now - millis) / HOUR_MILLIS).toDouble().roundToInt();
-            rightTime = minutes.toString()+"H"
+        } else {
+            val minutes: Int = ((now - millis) / HOUR_MILLIS).toDouble().roundToInt()
+            rightTime = minutes.toString() + "H"
             println("more than hour $rightTime")
         }
-    }else  {
-        val dateDate = Date(millis);
-        rightTime = sDateFormat.format(dateDate);
+    } else {
+        val dateDate = Date(millis)
+        rightTime = sDateFormat.format(dateDate)
         println("more than day $rightTime")
 
     }
     // Add a dot to the date string
-    val result = "\u2022 $rightTime";
+    val result = "\u2022 $rightTime"
     return result
 }

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.remindme.database.PeopleDao
 
-class PeopleViewModelFactory (
+class PeopleViewModelFactory(
     private val dataSource: PeopleDao,
     private val application: Application
 ) : ViewModelProvider.Factory {

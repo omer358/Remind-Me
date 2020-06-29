@@ -4,7 +4,6 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.icu.util.Calendar
 import android.os.Bundle
-import android.text.InputType
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -36,14 +35,14 @@ class AddPersonFragment : Fragment() {
             R.layout.add_person_fragment, container, false
         )
 
-        Log.i(TAG,"AddPersonFragment started!")
-        val application =  requireNotNull(this.activity).application
+        Log.i(TAG, "AddPersonFragment started!")
+        val application = requireNotNull(this.activity).application
 
         val dataSource = PeopleDatabase.getInstance(application).peopleDao
-        viewModelFactory = AddPersonViewModelFactory(dataSource,application)
-        val viewModel: AddPersonViewModel by viewModels{viewModelFactory}
+        viewModelFactory = AddPersonViewModelFactory(dataSource, application)
+        val viewModel: AddPersonViewModel by viewModels { viewModelFactory }
 
-        dataBinding.bDone.setOnClickListener {view:View ->
+        dataBinding.bDone.setOnClickListener { view: View ->
             if (getData()) {
                 viewModel.insertPerson(people)
                 view.findNavController().navigate(R.id.action_addPersonFragment_to_peopleFragment)
@@ -61,36 +60,38 @@ class AddPersonFragment : Fragment() {
 
     }
 
-    private fun getData() :Boolean{
+    private fun getData(): Boolean {
         val firstName = dataBinding.etFirstName.text.toString().trim()
-        if (firstName ==""){
+        if (firstName == "") {
             dataBinding.etFirstName.error = getString(R.string.error_message)
             Log.e(TAG, getString(R.string.error_message))
             return false
         }
         val secondName = dataBinding.etSecondName.text.toString().trim()
-        if (secondName == "" ){
+        if (secondName == "") {
             dataBinding.etSecondName.error = getString(R.string.error_message)
-            Log.e(TAG,getString(R.string.error_message))
+            Log.e(TAG, getString(R.string.error_message))
             return false
         }
         val place = dataBinding.etPlace.text.toString().trim()
-        if (place == ""){
+        if (place == "") {
             dataBinding.etPlace.error = getString(R.string.error_message)
             return false
         }
         val date = dataBinding.etDate.text.toString().trim()
         val note = dataBinding.etNote.text.toString().trim()
         val gender = getGender()
-        people = People(firstName = firstName,
-            secondName = secondName,place = place,
-            time = date,note = note,gender = gender)
+        people = People(
+            firstName = firstName,
+            secondName = secondName, place = place,
+            time = date, note = note, gender = gender
+        )
         return true
     }
 
     private fun getGender(): String {
         val gender = dataBinding.rgGender.checkedRadioButtonId
-        return when(gender){
+        return when (gender) {
             R.id.rb_male -> "Male"
             R.id.rb_female -> "Female"
             else -> "Unknown"
@@ -128,6 +129,7 @@ class AddPersonFragment : Fragment() {
             calendar[Calendar.DAY_OF_MONTH]
         ).show()
     }
+
     companion object {
         private const val TAG = "AddPersonFragment"
     }

@@ -1,8 +1,7 @@
 package com.example.remindme.screens.people
 
 import android.app.Application
-import androidx.lifecycle.*
-import com.example.remindme.database.People
+import androidx.lifecycle.AndroidViewModel
 import com.example.remindme.database.PeopleDao
 import kotlinx.coroutines.*
 
@@ -13,18 +12,18 @@ class PeopleViewModel(
 
     private var viewModelJob = Job()
 
-    private val uiScope = CoroutineScope(Dispatchers.IO+viewModelJob)
+    private val uiScope = CoroutineScope(Dispatchers.IO + viewModelJob)
 
-     val people = dataSource.getAllPeople()
+    val people = dataSource.getAllPeople()
 
-    fun deleteAllPeople(){
+    fun deleteAllPeople() {
         uiScope.launch {
             clear()
         }
     }
 
-    private suspend fun clear(){
-        withContext(Dispatchers.IO){
+    private suspend fun clear() {
+        withContext(Dispatchers.IO) {
             dataSource.clear()
         }
     }

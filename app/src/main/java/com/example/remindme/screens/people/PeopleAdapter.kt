@@ -1,6 +1,5 @@
 package com.example.remindme.screens.people
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -11,7 +10,7 @@ import com.example.remindme.convertDateToPassedTime
 import com.example.remindme.database.People
 import com.example.remindme.databinding.PeopleListItemBinding
 
-class PeopleAdapter:ListAdapter<People,PeopleAdapter.ViewHolder>(PeopleDiffCallback()){
+class PeopleAdapter : ListAdapter<People, PeopleAdapter.ViewHolder>(PeopleDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
@@ -23,9 +22,10 @@ class PeopleAdapter:ListAdapter<People,PeopleAdapter.ViewHolder>(PeopleDiffCallb
     }
 
     class ViewHolder private constructor(
-         val binding: PeopleListItemBinding
-    ): RecyclerView.ViewHolder(binding.root
-    ){
+        val binding: PeopleListItemBinding
+    ) : RecyclerView.ViewHolder(
+        binding.root
+    ) {
         fun bind(
             item: People
         ) {
@@ -43,16 +43,16 @@ class PeopleAdapter:ListAdapter<People,PeopleAdapter.ViewHolder>(PeopleDiffCallb
         companion object {
             fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = PeopleListItemBinding.inflate(layoutInflater,parent,false)
+                val binding = PeopleListItemBinding.inflate(layoutInflater, parent, false)
                 return ViewHolder(binding)
             }
         }
     }
 }
 
-class PeopleDiffCallback: DiffUtil.ItemCallback<People>(){
+class PeopleDiffCallback : DiffUtil.ItemCallback<People>() {
     override fun areItemsTheSame(oldItem: People, newItem: People): Boolean {
-        return  oldItem.id == newItem.id
+        return oldItem.id == newItem.id
     }
 
     override fun areContentsTheSame(oldItem: People, newItem: People): Boolean {
