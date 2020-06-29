@@ -37,7 +37,7 @@ class PeopleAdapter : ListAdapter<People, PeopleAdapter.ViewHolder>(PeopleDiffCa
                     else -> R.drawable.ic_baseline_person_outline_24
                 }
             )
-            binding.timeMeetingItem.text = convertDateToPassedTime(item.time)
+            binding.registerationTimeItem.text = convertDateToPassedTime(item.registrationTime)
         }
 
         companion object {

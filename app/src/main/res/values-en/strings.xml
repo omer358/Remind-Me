@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Remember Me</string>
+    <string name="app_name">Remind Me</string>
     <string name="first_name">First Name</string>
     <string name="second_name">Second Name</string>
     <string name="meeting_place">Meeting Place</string>
