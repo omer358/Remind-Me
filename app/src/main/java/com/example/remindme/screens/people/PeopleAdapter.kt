@@ -1,11 +1,13 @@
 package com.example.remindme.screens.people
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.remindme.R
+import com.example.remindme.convertDateToPassedTime
 import com.example.remindme.database.People
 import com.example.remindme.databinding.PeopleListItemBinding
 
@@ -27,7 +29,7 @@ class PeopleAdapter:ListAdapter<People,PeopleAdapter.ViewHolder>(PeopleDiffCallb
         fun bind(
             item: People
         ) {
-            binding.personNameItem.text = item.firstName
+            binding.personNameItem.text = item.firstName + " " + item.secondName
             binding.imageItem.setImageResource(
                 when (item.gender) {
                     "Male" -> R.drawable.ic_baseline_emoji_emotions_30
@@ -35,7 +37,7 @@ class PeopleAdapter:ListAdapter<People,PeopleAdapter.ViewHolder>(PeopleDiffCallb
                     else -> R.drawable.ic_baseline_person_outline_24
                 }
             )
-            binding.timeMeetingItem.text = item.time
+            binding.timeMeetingItem.text = convertDateToPassedTime(item.time)
         }
 
         companion object {
