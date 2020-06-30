@@ -2,12 +2,12 @@ package com.example.remindme.screens.people
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.remindme.R
 import com.example.remindme.database.PeopleDatabase
 import com.example.remindme.databinding.PeopleFragmentBinding
@@ -43,7 +43,7 @@ class PeopleFragment : Fragment() {
         dataBinding.lifecycleOwner = this
 
         val adapter = PeopleAdapter(PersonClickListener { personId: Long ->
-            Toast.makeText(context,"$personId",Toast.LENGTH_SHORT).show()
+            peopleViewModel.onPersonClicked(personId)
         })
         dataBinding.peopleList.adapter = adapter
 
@@ -62,6 +62,15 @@ class PeopleFragment : Fragment() {
         dataBinding.fb.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_peopleFragment_to_addPersonFragment)
         }
+
+        peopleViewModel.navigateToPersonDetails.observe(viewLifecycleOwner, Observer {person ->
+            person?.let {
+                this.findNavController().navigate(
+                    PeopleFragmentDirections.actionPeopleFragmentToPersonDetailsFragment(person)
+                )
+                peopleViewModel.onPersonDetailsNavigated()
+            }
+        })
         return dataBinding.root
     }
 

@@ -32,5 +32,21 @@
             app:exitAnim="@anim/fragment_close_exit"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_peopleFragment_to_personDetailsFragment"
+            app:destination="@id/personDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/personDetailsFragment"
+        android:name="com.example.remindme.screens.details.PersonDetailsFragment"
+        android:label="person_details_fragment"
+        tools:layout="@layout/person_details_fragment" >
+        <argument
+            android:name="personId"
+            app:argType="long" />
     </fragment>
 </navigation>
