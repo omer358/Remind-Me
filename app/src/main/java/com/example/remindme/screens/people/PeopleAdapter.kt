@@ -10,15 +10,14 @@ import com.example.remindme.convertDateToPassedTime
 import com.example.remindme.database.People
 import com.example.remindme.databinding.PeopleListItemBinding
 
-class PeopleAdapter : ListAdapter<People, PeopleAdapter.ViewHolder>(PeopleDiffCallback()) {
+class PeopleAdapter(private val personClickListener: PersonClickListener) : ListAdapter<People, PeopleAdapter.ViewHolder>(PeopleDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = getItem(position)
-        holder.bind(item)
+        holder.bind(getItem(position)!!,personClickListener)
     }
 
     class ViewHolder private constructor(
@@ -27,7 +26,8 @@ class PeopleAdapter : ListAdapter<People, PeopleAdapter.ViewHolder>(PeopleDiffCa
         binding.root
     ) {
         fun bind(
-            item: People
+            item: People,
+            personClickListener: PersonClickListener
         ) {
             binding.personNameItem.text = item.firstName + " " + item.secondName
             binding.imageItem.setImageResource(
@@ -38,6 +38,9 @@ class PeopleAdapter : ListAdapter<People, PeopleAdapter.ViewHolder>(PeopleDiffCa
                 }
             )
             binding.registerationTimeItem.text = convertDateToPassedTime(item.registrationTime)
+            binding.parent.setOnClickListener {
+                personClickListener.onclick(item)
+            }
         }
 
         companion object {
@@ -58,5 +61,8 @@ class PeopleDiffCallback : DiffUtil.ItemCallback<People>() {
     override fun areContentsTheSame(oldItem: People, newItem: People): Boolean {
         return oldItem == newItem
     }
+}
 
+class PersonClickListener(val clickListener: (personId: Long) ->Unit){
+    fun onclick(people: People) = clickListener(people.id)
 }

@@ -2,6 +2,7 @@ package com.example.remindme.screens.people
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -41,7 +42,9 @@ class PeopleFragment : Fragment() {
         dataBinding.peopleViewModel = peopleViewModel
         dataBinding.lifecycleOwner = this
 
-        val adapter = PeopleAdapter()
+        val adapter = PeopleAdapter(PersonClickListener { personId: Long ->
+            Toast.makeText(context,"$personId",Toast.LENGTH_SHORT).show()
+        })
         dataBinding.peopleList.adapter = adapter
 
         peopleViewModel.people.observe(viewLifecycleOwner, Observer {
