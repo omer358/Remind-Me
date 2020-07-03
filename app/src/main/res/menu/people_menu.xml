@@ -6,5 +6,5 @@
         android:id="@+id/delete_all_menu_item"
         android:icon="@drawable/ic_baseline_delete_24"
         android:title="@string/delete_all"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 </menu>
