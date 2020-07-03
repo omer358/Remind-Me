@@ -13,7 +13,7 @@ interface PeopleDao {
     fun update (people: People)
 
     @Query("SELECT * FROM people_table WHERE id = :key")
-    fun getPerson(key: Long):People
+    fun getPerson(key: Long):LiveData<People>
 
     @Query("DELETE FROM people_table")
     fun clear()

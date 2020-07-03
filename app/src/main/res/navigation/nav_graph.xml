@@ -35,16 +35,16 @@
         <action
             android:id="@+id/action_peopleFragment_to_personDetailsFragment"
             app:destination="@id/personDetailsFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/personDetailsFragment"
         android:name="com.example.remindme.screens.details.PersonDetailsFragment"
-        android:label="person_details_fragment"
-        tools:layout="@layout/person_details_fragment" >
+        android:label="@string/person_details_fragment"
+        tools:layout="@layout/person_details_fragment">
         <argument
             android:name="personId"
             app:argType="long" />

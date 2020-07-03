@@ -27,9 +27,11 @@ class PersonDetailsFragment : Fragment() {
         val dataSource = PeopleDatabase.getInstance(application).peopleDao
         val personId: Long = args.personId
 
-//        val viewModelFactory = PersonDetailsViewModelFactory(application,dataSource,personId)
-//        val viewModel : PersonDetailsViewModel by viewModels{viewModelFactory}
-        dataBinding.textView2.text = personId.toString()
+        val viewModelFactory = PersonDetailsViewModelFactory(application,dataSource,personId)
+        val viewModel : PersonDetailsViewModel by viewModels{viewModelFactory}
+
+        dataBinding.viewModel = viewModel
+        dataBinding.lifecycleOwner = viewLifecycleOwner
 
         return dataBinding.root
     }

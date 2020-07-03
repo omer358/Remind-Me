@@ -82,4 +82,7 @@ dependencies {
     
     //Material design dependency
     implementation 'com.google.android.material:material:1.1.0'
+
+    //circle imageView library
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

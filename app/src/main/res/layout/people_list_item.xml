@@ -31,7 +31,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/ic_baseline_emoji_emotions_30"/>
+                tools:srcCompat="@drawable/ic_avatar_16"/>
 
             <TextView
                 android:id="@+id/person_name_item"
