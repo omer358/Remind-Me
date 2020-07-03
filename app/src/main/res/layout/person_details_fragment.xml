@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintStart_toStartOf="@+id/place"
             app:layout_constraintTop_toBottomOf="@+id/place"
@@ -93,7 +93,7 @@
             android:id="@+id/dis_reg_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             app:layout_constraintBottom_toBottomOf="@+id/textView4"
             app:layout_constraintStart_toEndOf="@+id/textView4"
@@ -106,10 +106,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:text="@string/meeting_place"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/full_name"
-            tools:text="@string/meeting_place" />
+            app:layout_constraintTop_toBottomOf="@+id/full_name" />
 
         <TextView
             android:id="@+id/textView3"
@@ -117,10 +117,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:text="@string/meeting_time"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dis_meeting_place"
-            tools:text="@string/meeting_time" />
+            app:layout_constraintTop_toBottomOf="@+id/dis_meeting_place" />
 
         <TextView
             android:id="@+id/textView4"
@@ -128,10 +128,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="16dp"
+            android:text="@string/registeration_time"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="@string/registeration_time" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
