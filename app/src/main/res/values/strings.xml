@@ -20,4 +20,10 @@
     <string name="about">About :</string>
     <string name="registeration_time">Registration Time:</string>
     <string name="person_details_fragment">Person Details</string>
+    <string name="delete_person">delete</string>
+    <string name="edit_person">Edit</string>
+    <string name="title">do you want to delete all the people</string>
+    <string name="supporting_text">you will not be able to restore you dat!</string>
+    <string name="cancel">cancel</string>
+    <string name="delete">delete</string>
 </resources>

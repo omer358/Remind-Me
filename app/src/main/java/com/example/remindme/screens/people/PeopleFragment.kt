@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.remindme.R
 import com.example.remindme.database.PeopleDatabase
 import com.example.remindme.databinding.PeopleFragmentBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class PeopleFragment : Fragment() {
     private lateinit var dataBinding: PeopleFragmentBinding
@@ -87,7 +88,18 @@ class PeopleFragment : Fragment() {
     }
 
     private fun deleteAllData() {
-        viewModel.deleteAllPeople()
+
+        MaterialAlertDialogBuilder(context)
+            .setTitle(resources.getString(R.string.title))
+            .setMessage(resources.getString(R.string.supporting_text))
+            .setNeutralButton(resources.getString(R.string.cancel)) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setPositiveButton(resources.getString(R.string.delete)) { dialog, _ ->
+                viewModel.deleteAllPeople()
+                dialog.cancel()
+            }
+            .show()
     }
 
     companion object {

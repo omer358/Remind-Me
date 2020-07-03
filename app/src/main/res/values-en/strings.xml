@@ -15,4 +15,5 @@
     <string name="male">Male</string>
     <string name="error_message">can\'t not be empty!</string>
     <string name="name">Omer Maki</string>
+    <string name="edit_person">Edit</string>
 </resources>

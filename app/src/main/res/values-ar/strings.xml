@@ -15,4 +15,5 @@
     <string name="male">ذكر</string>
     <string name="error_message">لا يمكن أن يكون فارق!</string>
     <string name="name">عمر مكي</string>
+    <string name="edit_person">Edit</string>
 </resources>
