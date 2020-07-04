@@ -5,7 +5,7 @@ Remind me is a reminder app for people you have met, you add them to the app dat
 Screenshots
 -----------
 
-![List of people](screenshots/listOfPeople.png =250x250 "A list of people")
+![](screenshots/listOfPeople.png "a list of people")
 ![person details](screenshots/personDetails.png "Details for a specific person you added")
 ![input form](screenshots/inputForm.png "add person form")
 
