@@ -101,12 +101,12 @@ class AddPersonFragment : Fragment() {
     private fun showDateDialog(editTextDate: TextInputEditText) {
         val calendar = java.util.Calendar.getInstance()
         val dateSetListener =
-            DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+            DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
                 calendar[Calendar.YEAR] = year
                 calendar[Calendar.MONTH] = month
                 calendar[Calendar.DAY_OF_MONTH] = dayOfMonth
                 val timeSetListener =
-                    TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+                    TimePickerDialog.OnTimeSetListener { _, hourOfDay, minute ->
                         calendar[Calendar.HOUR_OF_DAY] = hourOfDay
                         calendar[Calendar.MINUTE] = minute
                         val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm")

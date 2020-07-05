@@ -66,7 +66,7 @@ class PersonDetailsFragment : Fragment() {
 
     private fun showDeleteDialog() {
         MaterialAlertDialogBuilder(context)
-            .setTitle(resources.getString(R.string.title))
+            .setTitle(resources.getString(R.string.title_delete_person))
             .setMessage(resources.getString(R.string.supporting_text))
             .setNeutralButton(resources.getString(R.string.cancel)) { dialog, _ ->
                 dialog.dismiss()

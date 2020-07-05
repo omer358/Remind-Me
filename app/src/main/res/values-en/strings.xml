@@ -9,11 +9,20 @@
     <string name="meeting_date">Meeting Date</string>
     <string name="meeting_time">Meeting Time</string>
     <string name="note_hint">note</string>
-    <string name="done_string">done</string>
+    <string name="done_string">Add</string>
     <string name="gender">Gender:</string>
     <string name="female">Female</string>
     <string name="male">Male</string>
-    <string name="error_message">can\'t not be empty!</string>
-    <string name="name">Omer Maki</string>
+    <string name="error_message">can\'t not be empty!</string>\
     <string name="edit_person">Edit</string>
+    <string name="delete_all">Delete All</string>
+    <string name="there_is_no_people">Go out and be Social!</string>
+    <string name="notes">Notes:</string>
+    <string name="person_details_fragment">Person Details</string>
+    <string name="registeration_time">Registration Time:</string>
+    <string name="delete_person">delete</string>
+    <string name="title">do you want to delete all the people</string>
+    <string name="supporting_text">you will not be able to restore you data!</string>
+    <string name="cancel">cancel</string>
+    <string name="delete">delete</string>
 </resources>

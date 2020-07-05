@@ -8,12 +8,22 @@
     <string name="people">الأشخاص</string>
     <string name="meeting_date">تاريخ الإلتقاء</string>
     <string name="meeting_time">زمن الإلتقاء</string>
-    <string name="note_hint">ملاحظة</string>
-    <string name="done_string">تم</string>
+    <string name="note_hint">ملاحظات</string>
+    <string name="done_string">إضافة</string>
     <string name="gender">الجنس:</string>
     <string name="female">أنثى</string>
     <string name="male">ذكر</string>
     <string name="error_message">لا يمكن أن يكون فارق!</string>
-    <string name="name">عمر مكي</string>
     <string name="edit_person">Edit</string>
+    <string name="delete_all">مسح الكل</string>
+    <string name="delete">حذف</string>
+    <string name="cancel">إلغاء</string>
+    <string name="supporting_text">لن تستطيع إسترجاع البيانات بعد حذفها!</string>
+    <string name="title">هل تريد حذف كل الأشخاص</string>
+    <string name="delete_person">حذف</string>
+    <string name="person_details_fragment">تفاصيل الشخص</string>
+    <string name="registeration_time">زمن الإضافة</string>
+    <string name="notes">ملاحظات:</string>
+    <string name="title_delete_person">هل تريد حذف هذا الشخص؟</string>
+    <string name="there_is_no_people">أنطلق و كن إجتماعيا!</string>
 </resources>
