@@ -1,5 +1,6 @@
 package com.example.remindme.screens.people
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import androidx.databinding.DataBindingUtil
@@ -51,11 +52,15 @@ class PeopleFragment : Fragment() {
         peopleViewModel.people.observe(viewLifecycleOwner, Observer {
             if (it.isEmpty()) {
                 dataBinding.tvEmpty.visibility = View.VISIBLE
+                dataBinding.emptyStateImage.visibility = View.VISIBLE
                 dataBinding.peopleList.visibility = View.GONE
+                dataBinding.parentLayout.setBackgroundColor(Color.WHITE)
                 adapter.notifyDataSetChanged()
             } else {
                 dataBinding.tvEmpty.visibility = View.GONE
+                dataBinding.emptyStateImage.visibility = View.GONE
                 dataBinding.peopleList.visibility = View.VISIBLE
+                dataBinding.parentLayout.setBackgroundColor(Color.parseColor("#eeeeee"));
                 adapter.submitList(it)
             }
         })

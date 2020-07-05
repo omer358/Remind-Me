@@ -16,7 +16,7 @@
     <string name="error_message">can\'t not be empty!</string>
     <string name="name">Omer Maki</string>
     <string name="delete_all">Delete All</string>
-    <string name="there_is_no_people">there is no people!</string>
+    <string name="there_is_no_people">Go out and be Social!</string>
     <string name="about">About :</string>
     <string name="registeration_time">Registration Time:</string>
     <string name="person_details_fragment">Person Details</string>
