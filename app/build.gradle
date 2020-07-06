@@ -50,6 +50,7 @@ dependencies {
     def nav_version = "2.3.0"
     def room_version = "2.2.5"
     def lifecycle_version = "2.2.0"
+    def preference_version = "1.1.1"
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -85,4 +86,7 @@ dependencies {
 
     //circle imageView library
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //preference
+    implementation "androidx.preference:preference-ktx:$preference_version"
 }

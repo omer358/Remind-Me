@@ -39,6 +39,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_peopleFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
     </fragment>
     <fragment
         android:id="@+id/personDetailsFragment"
@@ -49,4 +52,8 @@
             android:name="personId"
             app:argType="long" />
     </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.remindme.SettingFragment"
+        android:label="@string/settings" />
 </navigation>

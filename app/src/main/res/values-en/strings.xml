@@ -25,4 +25,9 @@
     <string name="supporting_text">you will not be able to restore you data!</string>
     <string name="cancel">cancel</string>
     <string name="delete">delete</string>
+    <string name="title_delete_person">do you want to delete this Person?</string>
+    <string name="dark_mode_label">Dark Mode</string>
+    <string name="light_mode_label">Light Mode</string>
+    <string name="system_default_label">Default System</string>
+    <string name="settings">Settings</string>
 </resources>

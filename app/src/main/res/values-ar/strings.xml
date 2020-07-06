@@ -26,4 +26,8 @@
     <string name="notes">ملاحظات:</string>
     <string name="title_delete_person">هل تريد حذف هذا الشخص؟</string>
     <string name="there_is_no_people">أنطلق و كن إجتماعيا!</string>
+    <string name="dark_mode_label">الوضع المظلم</string>
+    <string name="settings">الإعدادت</string>
+    <string name="system_default_label">وضع النظام</string>
+    <string name="light_mode_label">الوضع النهاري</string>
 </resources>

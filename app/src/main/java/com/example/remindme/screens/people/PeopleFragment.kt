@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.remindme.R
 import com.example.remindme.database.PeopleDatabase
 import com.example.remindme.databinding.PeopleFragmentBinding
@@ -88,8 +89,9 @@ class PeopleFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.delete_all_menu_item -> deleteAllData()
+            R.id.setting_item -> this.findNavController().navigate(R.id.action_peopleFragment_to_settingFragment)
         }
-        return true
+        return super.onOptionsItemSelected(item)
     }
 
     private fun deleteAllData() {
