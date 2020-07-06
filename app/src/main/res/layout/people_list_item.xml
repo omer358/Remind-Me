@@ -16,13 +16,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="4dp"
         app:cardElevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_ripple">
 
             <ImageView
                 android:id="@+id/image_item"
@@ -42,7 +42,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_item"
                 app:layout_constraintTop_toTopOf="@id/image_item"
-                tools:text="@string/name"/>
+                tools:text="Maather Maki"/>
 
             <TextView
                 android:id="@+id/registeration_time_item"
