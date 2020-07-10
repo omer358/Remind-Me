@@ -55,13 +55,13 @@ class PeopleFragment : Fragment() {
                 dataBinding.tvEmpty.visibility = View.VISIBLE
                 dataBinding.emptyStateImage.visibility = View.VISIBLE
                 dataBinding.peopleList.visibility = View.GONE
-                dataBinding.parentLayout.setBackgroundColor(Color.WHITE)
+//                dataBinding.parentLayout.setBackgroundColor(Color.WHITE)
                 adapter.notifyDataSetChanged()
             } else {
                 dataBinding.tvEmpty.visibility = View.GONE
                 dataBinding.emptyStateImage.visibility = View.GONE
                 dataBinding.peopleList.visibility = View.VISIBLE
-                dataBinding.parentLayout.setBackgroundColor(Color.parseColor("#eeeeee"));
+//                dataBinding.parentLayout.setBackgroundColor(Color.parseColor("#eeeeee"));
                 adapter.submitList(it)
             }
         })

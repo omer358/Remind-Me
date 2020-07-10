@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory
+    app:key="theme_category"
+    app:title="@string/theme_category_title">
+    <ListPreference
+        app:title="@string/choose_theme_title"
+        app:key="themePref"
+        app:defaultValue="default"
+        app:dialogTitle="@string/choose_theme_title"
+        app:entries="@array/themeListArray"
+        app:entryValues="@array/themeEntryArray"
+        app:useSimpleSummaryProvider="true"
+        />
+</PreferenceCategory>
 
-</PreferenceScreen>
+</androidx.preference.PreferenceScreen>
