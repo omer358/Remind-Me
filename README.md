@@ -8,6 +8,9 @@ Screenshots
 ![](screenshots/listOfPeople.png "a list of people")
 ![person details](screenshots/personDetails.png "Details for a specific person you added")
 ![input form](screenshots/inputForm.png "add person form")
+![dark mode support](screenshots/dark-mode.png "dark mode")
+![splash screen support](screenshots/splash-screen.png "splash screen")
+![empty state](screenshots/empty-state "empty state")
 
 Libraries Used
 --------------
