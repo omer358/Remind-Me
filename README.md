@@ -44,6 +44,6 @@ Libraries Used
 
 Upcoming features
 -----------------
-updates will include notifications services,dark mode, splash screen and also more fo jetpack libraries.s
+updates will include notifications services.
 
 
