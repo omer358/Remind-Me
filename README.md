@@ -10,7 +10,7 @@ Screenshots
 ![input form](screenshots/inputForm.png "add person form")
 ![dark mode support](screenshots/dark-mode.png "dark mode")
 ![splash screen support](screenshots/splash-screen.png "splash screen")
-![empty state](screenshots/empty-state "empty state")
+![empty state](screenshots/empty-state.png "empty state")
 
 Libraries Used
 --------------
