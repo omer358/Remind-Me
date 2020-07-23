@@ -92,8 +92,8 @@ class AddPersonFragment : Fragment() {
     private fun getGender(): String {
         val gender = dataBinding.rgGender.checkedRadioButtonId
         return when (gender) {
-            R.id.rb_male -> "Male"
-            R.id.rb_female -> "Female"
+            R.id.rb_male -> "male"
+            R.id.rb_female -> "female"
             else -> "Unknown"
         }
     }

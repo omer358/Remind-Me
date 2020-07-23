@@ -14,6 +14,7 @@ import com.example.remindme.R
 import com.example.remindme.database.PeopleDatabase
 import com.example.remindme.databinding.PeopleFragmentBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 
 class PeopleFragment : Fragment() {
     private lateinit var dataBinding: PeopleFragmentBinding
@@ -88,10 +89,15 @@ class PeopleFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.dummy_data_menu_item -> addDummyData();
             R.id.delete_all_menu_item -> deleteAllData()
             R.id.setting_item -> this.findNavController().navigate(R.id.action_peopleFragment_to_settingFragment)
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun addDummyData() {
+        viewModel.AddDummyData()
     }
 
     private fun deleteAllData() {

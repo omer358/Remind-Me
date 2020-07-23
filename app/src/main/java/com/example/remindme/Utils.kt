@@ -1,7 +1,11 @@
 package com.example.remindme
 
+import android.util.Log
+import com.example.remindme.database.People
+import com.example.remindme.screens.people.PeopleViewModel
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.math.roundToInt
 
 private val sDateFormat = SimpleDateFormat("dd MMM")
@@ -40,3 +44,39 @@ fun convertDateToPassedTime(time: Long): CharSequence? {
     val result = "\u2022 $rightTime"
     return result
 }
+
+
+fun groupOfPeople() : List<People>{
+    val arrayList = ArrayList<People>()
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    Log.i(PeopleViewModel.TAG, "groupOfPeople: ${arrayList.size}")
+    arrayList.toList()
+    return arrayList
+}
+
+

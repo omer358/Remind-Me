@@ -9,6 +9,10 @@ interface PeopleDao {
     @Insert
     fun insert(people: People)
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAll(vararg people: People)
+
+
     @Update
     fun update (people: People)
 
