@@ -27,7 +27,9 @@
             android:hint="@string/first_name"
             app:layout_constraintEnd_toStartOf="@+id/outlined_second_name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="24dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_first_name"
@@ -164,9 +166,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:text="@string/done_string"
+            style="@style/Widget.AppCompat.Button"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/outlined_note" />
+            app:layout_constraintTop_toBottomOf="@id/outlined_note"
+            android:layout_marginRight="8dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
