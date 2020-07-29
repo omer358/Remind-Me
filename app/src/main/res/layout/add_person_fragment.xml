@@ -159,19 +159,18 @@
                 android:inputType="textLongMessage" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/b_done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:text="@string/done_string"
-            style="@style/Widget.AppCompat.Button"
+            android:backgroundTint="@color/secondaryColor"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/outlined_note"
             android:layout_marginRight="8dp" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
