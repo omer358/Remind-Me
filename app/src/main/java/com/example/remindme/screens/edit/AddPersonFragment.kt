@@ -16,6 +16,8 @@ import com.example.remindme.R
 import com.example.remindme.database.People
 import com.example.remindme.database.PeopleDatabase
 import com.example.remindme.databinding.AddPersonFragmentBinding
+import com.example.remindme.selectFemaleVector
+import com.example.remindme.selectMaleVector
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 
@@ -84,9 +86,16 @@ class AddPersonFragment : Fragment() {
         people = People(
             firstName = firstName,
             secondName = secondName, place = place,
-            time = date, note = note, gender = gender
-        )
+            time = date, note = note, gender = gender,avatar = vector(gender))
         return true
+    }
+
+    fun vector(gender:String):Int{
+        return when(gender){
+            "male" -> selectMaleVector()
+            "female" -> selectFemaleVector()
+            else -> R.drawable.ic_baseline_person_outline_24
+        }
     }
 
     private fun getGender(): String {

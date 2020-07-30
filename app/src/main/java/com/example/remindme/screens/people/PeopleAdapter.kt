@@ -30,13 +30,7 @@ class PeopleAdapter(private val personClickListener: PersonClickListener) : List
             personClickListener: PersonClickListener
         ) {
             binding.personNameItem.text = item.firstName + " " + item.secondName
-            binding.imageItem.setImageResource(
-                when (item.gender) {
-                    "male" -> R.drawable.ic_avatar_1
-                    "female" -> R.drawable.ic_avatar_16
-                    else -> R.drawable.ic_baseline_person_outline_24
-                }
-            )
+            binding.imageItem.setImageResource(item.avatar)
             binding.registerationTimeItem.text = convertDateToPassedTime(item.registrationTime)
             binding.parent.setOnClickListener {
                 personClickListener.onclick(item)

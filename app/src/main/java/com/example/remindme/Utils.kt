@@ -45,35 +45,54 @@ fun convertDateToPassedTime(time: Long): CharSequence? {
     return result
 }
 
+fun selectFemaleVector(): Int{
+    val vectors = listOf(
+        R.drawable.ic_f1,
+        R.drawable.ic_f2,
+        R.drawable.ic_f3,
+        R.drawable.ic_f4,
+        R.drawable.ic_f5).shuffled()
+    return vectors[0]
+}
+
+fun selectMaleVector():Int{
+    val vectors = listOf(
+        R.drawable.ic_m1,
+        R.drawable.ic_m2,
+        R.drawable.ic_m3,
+        R.drawable.ic_m4,
+        R.drawable.ic_m5).shuffled()
+    return vectors[0]
+}
 
 fun groupOfPeople() : List<People>{
     val arrayList = ArrayList<People>()
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male"))
-    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female"))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "male",avatar = selectMaleVector()))
+    arrayList.add(People(firstName = "Test",secondName = "Propse",place = "Home",time = "2020-07-01 15:59",note = "this element for test proposes",gender = "female",avatar = selectFemaleVector()))
     Log.i(PeopleViewModel.TAG, "groupOfPeople: ${arrayList.size}")
     arrayList.toList()
     return arrayList

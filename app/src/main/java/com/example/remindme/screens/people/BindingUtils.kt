@@ -48,9 +48,5 @@ fun TextView.setRegistrationTime(item: People?) {
 @BindingAdapter("genderImage")
 fun ImageView.setGenderImage(item: People?){
     val gender = item?.gender
-    setImageResource(when(gender){
-        "male" -> R.drawable.ic_avatar_1
-        "female" -> R.drawable.ic_avatar_16
-        else  -> R.drawable.ic_baseline_person_outline_24
-    })
+    setImageResource(item?.avatar ?:R.drawable.ic_baseline_person_outline_24)
 }

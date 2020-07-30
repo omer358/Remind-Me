@@ -13,11 +13,6 @@ class AddPersonViewModel(
     val dataSource: PeopleDao,
     val application: Application
 ) : ViewModel() {
-
-    private val _firstName = MutableLiveData<String>("")
-    val firstName: LiveData<String>
-        get() = _firstName
-
     private var viewModelJob = Job()
 
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)

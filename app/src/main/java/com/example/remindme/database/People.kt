@@ -14,4 +14,5 @@ data class People (
     @ColumnInfo(name = "meeting_time") var time: String,
     @ColumnInfo(name ="note")var note:String?,
     @ColumnInfo(name = "registration_time")val registrationTime: Long = System.currentTimeMillis(),
-    var gender:String)
+    var gender:String,
+    var avatar: Int)
