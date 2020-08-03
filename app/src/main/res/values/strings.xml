@@ -33,4 +33,5 @@
     <string name="theme_category_title">theme</string>
     <string name="choose_theme_title">choose theme</string>
     <string name="dummy_data_title">Add dummy Data</string>
+    <string name="Notify" />
 </resources>

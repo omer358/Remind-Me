@@ -1,17 +1,20 @@
 package com.example.remindme.screens.details
 
 import android.app.Application
+import android.app.NotificationManager
 import android.util.Log
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.remindme.database.People
 import com.example.remindme.database.PeopleDao
+import com.example.remindme.sendNotification
 import kotlinx.coroutines.*
 
 class PersonDetailsViewModel(
-    application: Application,
+    val application: Application,
     val dataSource: PeopleDao,
     personId: Long
 ) : ViewModel() {
@@ -31,6 +34,11 @@ class PersonDetailsViewModel(
         person.addSource(dataSource.getPerson(personId), person::setValue)
     }
 
+    fun startNotification(){
+        val notificationManager = ContextCompat.getSystemService(application,
+            NotificationManager::class.java)
+        notificationManager?.sendNotification(application, person.value!!)
+    }
     fun deletePerson(id: Long){
         uiScope.launch {
             Log.i(TAG,"deletePerson fun is running!")

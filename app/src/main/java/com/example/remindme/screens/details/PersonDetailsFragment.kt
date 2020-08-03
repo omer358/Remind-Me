@@ -1,8 +1,13 @@
 package com.example.remindme.screens.details
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
@@ -46,8 +51,26 @@ class PersonDetailsFragment : Fragment() {
         })
 
         setHasOptionsMenu(true)
+        createNotificationChannel()
 
         return dataBinding.root
+    }
+
+    private fun createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "REMIND-ME"
+            val descriptionText = "to remind you of people "
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel("id", name, importance).apply {
+                description = descriptionText
+            }
+            // Register the channel with the system
+            val notificationManager: NotificationManager = requireActivity()
+                .getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -60,6 +83,9 @@ class PersonDetailsFragment : Fragment() {
         if (itemId == R.id.delete_person_item){
             Log.i(TAG,"the delete Item has been selected!")
             showDeleteDialog()
+        }
+        if(itemId == R.id.noitfication_item){
+            personDetailsViewModel.startNotification()
         }
         return super.onOptionsItemSelected(item)
     }

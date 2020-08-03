@@ -1,12 +1,16 @@
 package com.example.remindme
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.remindme.database.People
 import com.example.remindme.databinding.ActivityMainBinding
+import com.example.remindme.screens.details.PersonDetailsFragment
+import com.example.remindme.screens.people.PeopleFragmentDirections
 
 class MainActivity : AppCompatActivity() {
 
