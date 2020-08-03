@@ -20,7 +20,7 @@ fun NotificationManager.sendNotification(
         putExtra("personId",person.id)
     }
     val bundle = Bundle()
-    bundle.putLong("personId",person.
+    bundle.putLong("personId",person.id)
 
     val pendingIntent =  NavDeepLinkBuilder(context)
         .setComponentName(MainActivity::class.java)
