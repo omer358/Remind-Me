@@ -1,4 +1,4 @@
-package com.example.remindme
+package com.example.remindme.utils
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatDelegate

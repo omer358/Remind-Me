@@ -2,6 +2,7 @@ package com.example.remindme
 
 import android.app.Application
 import androidx.preference.PreferenceManager
+import com.example.remindme.utils.ThemeHelper
 
 class DarkThemeApplication: Application() {
 

@@ -16,8 +16,8 @@ import com.example.remindme.R
 import com.example.remindme.database.People
 import com.example.remindme.database.PeopleDatabase
 import com.example.remindme.databinding.AddPersonFragmentBinding
-import com.example.remindme.selectFemaleVector
-import com.example.remindme.selectMaleVector
+import com.example.remindme.utils.selectFemaleVector
+import com.example.remindme.utils.selectMaleVector
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 

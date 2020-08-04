@@ -1,13 +1,11 @@
 package com.example.remindme.screens.people
 
-import android.text.format.DateUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.example.remindme.R
-import com.example.remindme.convertDateToPassedTime
+import com.example.remindme.utils.convertDateToPassedTime
 import com.example.remindme.database.People
-import java.text.SimpleDateFormat
 
 
 @BindingAdapter("personFullName")
@@ -41,7 +39,8 @@ fun TextView.setMeetingNote(item: People?) {
 @BindingAdapter("personMeetingRTime")
 fun TextView.setRegistrationTime(item: People?) {
     item?.let {
-        text = convertDateToPassedTime(item.registrationTime)
+        text =
+            convertDateToPassedTime(item.registrationTime)
     }
 }
 

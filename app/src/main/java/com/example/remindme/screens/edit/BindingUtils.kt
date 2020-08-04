@@ -1,12 +1,5 @@
 package com.example.remindme.screens.edit
 
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.databinding.BindingAdapter
-import com.example.remindme.R
-import com.example.remindme.convertDateToPassedTime
-import com.example.remindme.database.People
-
 //@BindingAdapter
 //fun TextView.setPersonName(people: People){
 //    people.let {

@@ -5,11 +5,9 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.remindme.database.People
 import com.example.remindme.database.PeopleDao
-import com.example.remindme.groupOfPeople
+import com.example.remindme.utils.groupOfPeople
 import kotlinx.coroutines.*
-import kotlin.math.log
 
 class PeopleViewModel(
     val dataSource: PeopleDao,
