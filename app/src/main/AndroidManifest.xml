@@ -19,6 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <receiver android:name=".notifications.AlarmReceiver"
+            android:exported="false"/>
     </application>
 
 </manifest>

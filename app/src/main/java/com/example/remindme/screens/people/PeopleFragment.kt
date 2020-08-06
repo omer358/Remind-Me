@@ -1,8 +1,14 @@
 package com.example.remindme.screens.people
 
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.os.SystemClock
 import android.view.*
+import androidx.core.app.AlarmManagerCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -13,6 +19,7 @@ import androidx.navigation.ui.NavigationUI
 import com.example.remindme.R
 import com.example.remindme.database.PeopleDatabase
 import com.example.remindme.databinding.PeopleFragmentBinding
+import com.example.remindme.notifications.AlarmReceiver
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
@@ -79,6 +86,18 @@ class PeopleFragment : Fragment() {
                 peopleViewModel.onPersonDetailsNavigated()
             }
         })
+
+        val alarmManager = context?.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
+        val intent = Intent(context,AlarmReceiver::class.java)
+        val pendingIntent = PendingIntent.getBroadcast(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
+
+        AlarmManagerCompat.setExact(
+            alarmManager!!,
+            AlarmManager.ELAPSED_REALTIME,
+            5000,
+            pendingIntent
+        )
+
         return dataBinding.root
     }
 
