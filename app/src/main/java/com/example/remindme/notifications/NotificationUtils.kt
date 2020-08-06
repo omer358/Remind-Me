@@ -16,15 +16,11 @@ import com.example.remindme.R
 import com.example.remindme.database.People
 
 private const val NOTIFICATION_ID = 0
-private const val REQUEST_CODE = 0
 
 fun NotificationManager.sendNotification(
     context:Context,
     person:People)
 {
-    val intent = Intent(context.applicationContext, MainActivity::class.java).apply {
-        putExtra("personId",person.id)
-    }
     val bundle = Bundle()
     bundle.putLong("personId",person.id)
 
@@ -35,20 +31,20 @@ fun NotificationManager.sendNotification(
         .setArguments(bundle)
         .createPendingIntent()
 
-    val bitmap = context.vectorToBitmap(person.avatar)
-
     val builder = NotificationCompat.Builder(context,"id")
         .setSmallIcon(R.drawable.ic_avatar_1)
-        .setLargeIcon(bitmap)
         .setContentTitle(person.firstName+" "+person.secondName)
         .setContentText("Do you remember ${person.firstName}, you met him at ${person.place}")
         .setPriority(NotificationCompat.PRIORITY_HIGH)
         .setChannelId("id")
         .setContentIntent(pendingIntent)
         .setAutoCancel(true)
-        .build()
 
-    notify(NOTIFICATION_ID,builder)
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+        val bitmap = context.vectorToBitmap(person.avatar)
+        builder.setLargeIcon(bitmap)
+    }
+    notify(NOTIFICATION_ID,builder.build())
 }
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
