@@ -7,6 +7,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.os.SystemClock
+import android.util.Log
 import android.view.*
 import androidx.core.app.AlarmManagerCompat
 import androidx.databinding.DataBindingUtil
@@ -42,6 +43,9 @@ class PeopleFragment : Fragment() {
         setHasOptionsMenu(true)
 
         val application = requireNotNull(this.activity).application
+        Log.i(TAG, "the context: ${application.applicationContext}")
+        Log.i(TAG, "the context: $context")
+        Log.i(TAG, "the context: ${context?.applicationContext}")
 
         val dataSource = PeopleDatabase.getInstance(application).peopleDao
 
@@ -91,9 +95,9 @@ class PeopleFragment : Fragment() {
         val intent = Intent(context,AlarmReceiver::class.java)
         val pendingIntent = PendingIntent.getBroadcast(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
 
-        AlarmManagerCompat.setExact(
+        AlarmManagerCompat.setExactAndAllowWhileIdle(
             alarmManager!!,
-            AlarmManager.ELAPSED_REALTIME,
+            AlarmManager.ELAPSED_REALTIME_WAKEUP,
             5000,
             pendingIntent
         )
