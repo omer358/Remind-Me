@@ -4,9 +4,7 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.os.SystemClock
 import android.util.Log
 import android.view.*
 import androidx.core.app.AlarmManagerCompat
@@ -16,13 +14,11 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import com.example.remindme.R
 import com.example.remindme.database.PeopleDatabase
 import com.example.remindme.databinding.PeopleFragmentBinding
 import com.example.remindme.notifications.AlarmReceiver
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.snackbar.Snackbar
 
 class PeopleFragment : Fragment() {
     private lateinit var dataBinding: PeopleFragmentBinding
@@ -35,9 +31,9 @@ class PeopleFragment : Fragment() {
 
         dataBinding = DataBindingUtil.inflate(
             inflater
-            , R.layout.people_fragment
-            , container
-            , false
+            ,R.layout.people_fragment
+            ,container
+            ,false
         )
 
         setHasOptionsMenu(true)
@@ -93,12 +89,15 @@ class PeopleFragment : Fragment() {
 
         val alarmManager = context?.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
         val intent = Intent(context,AlarmReceiver::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
+        val pendingIntent = PendingIntent.getBroadcast(context,
+            0,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT)
 
         AlarmManagerCompat.setExactAndAllowWhileIdle(
             alarmManager!!,
             AlarmManager.ELAPSED_REALTIME_WAKEUP,
-            5000,
+            10000,
             pendingIntent
         )
 
@@ -114,7 +113,8 @@ class PeopleFragment : Fragment() {
         when (item.itemId) {
             R.id.dummy_data_menu_item -> addDummyData();
             R.id.delete_all_menu_item -> deleteAllData()
-            R.id.setting_item -> this.findNavController().navigate(R.id.action_peopleFragment_to_settingFragment)
+            R.id.setting_item -> this.findNavController()
+                .navigate(R.id.action_peopleFragment_to_settingFragment)
         }
         return super.onOptionsItemSelected(item)
     }
@@ -124,7 +124,6 @@ class PeopleFragment : Fragment() {
     }
 
     private fun deleteAllData() {
-
         MaterialAlertDialogBuilder(context)
             .setTitle(resources.getString(R.string.title))
             .setMessage(resources.getString(R.string.supporting_text))
@@ -137,7 +136,6 @@ class PeopleFragment : Fragment() {
             }
             .show()
     }
-
     companion object {
         private const val TAG = "PeopleFragment"
     }
