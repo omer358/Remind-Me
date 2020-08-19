@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatDelegate
 
 class ThemeHelper {
 
-
-
     companion object {
         const val LIGHT_MODE = "light"
         const val DARK_MODE = "dark"
@@ -22,9 +20,13 @@ class ThemeHelper {
                 }
                 else -> {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+                        AppCompatDelegate
+                            .setDefaultNightMode(
+                                AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
                     } else {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
+                        AppCompatDelegate
+                            .setDefaultNightMode(
+                                AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
                     }
                 }
             }

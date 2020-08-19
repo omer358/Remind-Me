@@ -29,6 +29,7 @@ class PeopleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        // inflate the view using dataBinding
         dataBinding = DataBindingUtil.inflate(
             inflater
             ,R.layout.people_fragment
@@ -36,13 +37,16 @@ class PeopleFragment : Fragment() {
             ,false
         )
 
+        //initialize the layout with options menu
         setHasOptionsMenu(true)
 
+        //get the application context from the activity
         val application = requireNotNull(this.activity).application
         Log.i(TAG, "the context: ${application.applicationContext}")
         Log.i(TAG, "the context: $context")
         Log.i(TAG, "the context: ${context?.applicationContext}")
 
+        //get an instance 'a singleton' from room database
         val dataSource = PeopleDatabase.getInstance(application).peopleDao
 
         val viewModelFactory = PeopleViewModelFactory(dataSource, application)
@@ -53,22 +57,20 @@ class PeopleFragment : Fragment() {
         dataBinding.peopleViewModel = peopleViewModel
         dataBinding.lifecycleOwner = this
 
+        // initialize the the adapter from PeopleAdapter class
         val adapter = PeopleAdapter(PersonClickListener { personId: Long ->
             peopleViewModel.onPersonClicked(personId)
         })
+        // set the adapter for the recyclerView
         dataBinding.peopleList.adapter = adapter
 
         peopleViewModel.people.observe(viewLifecycleOwner, Observer {
             if (it.isEmpty()) {
-                dataBinding.tvEmpty.visibility = View.VISIBLE
-                dataBinding.emptyStateImage.visibility = View.VISIBLE
-                dataBinding.peopleList.visibility = View.GONE
+                showEmptyState()
 //                dataBinding.parentLayout.setBackgroundColor(Color.WHITE)
                 adapter.notifyDataSetChanged()
             } else {
-                dataBinding.tvEmpty.visibility = View.GONE
-                dataBinding.emptyStateImage.visibility = View.GONE
-                dataBinding.peopleList.visibility = View.VISIBLE
+                hideEmptyState()
 //                dataBinding.parentLayout.setBackgroundColor(Color.parseColor("#eeeeee"));
                 adapter.submitList(it)
             }
@@ -78,7 +80,8 @@ class PeopleFragment : Fragment() {
             view.findNavController().navigate(R.id.action_peopleFragment_to_addPersonFragment)
         }
 
-        peopleViewModel.navigateToPersonDetails.observe(viewLifecycleOwner, Observer {person ->
+        peopleViewModel.navigateToPersonDetails.observe(viewLifecycleOwner,
+            Observer {person ->
             person?.let {
                 this.findNavController().navigate(
                     PeopleFragmentDirections.actionPeopleFragmentToPersonDetailsFragment(person)
@@ -87,12 +90,34 @@ class PeopleFragment : Fragment() {
             }
         })
 
+        initializeTheAlarm()
+
+        return dataBinding.root
+    }
+
+    // the list isn't empty and we should hide the empty state views
+    private fun hideEmptyState() {
+        dataBinding.tvEmpty.visibility = View.GONE
+        dataBinding.emptyStateImage.visibility = View.GONE
+        dataBinding.peopleList.visibility = View.VISIBLE
+    }
+
+    // the list is empty, the empty state views will appear
+    private fun showEmptyState() {
+        dataBinding.tvEmpty.visibility = View.VISIBLE
+        dataBinding.emptyStateImage.visibility = View.VISIBLE
+        dataBinding.peopleList.visibility = View.GONE
+    }
+    // initialize the alarm manager to start the broadcast
+    private fun initializeTheAlarm() {
         val alarmManager = context?.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
-        val intent = Intent(context,AlarmReceiver::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(context,
+        val intent = Intent(context, AlarmReceiver::class.java)
+        val pendingIntent = PendingIntent.getBroadcast(
+            context,
             0,
             intent,
-            PendingIntent.FLAG_UPDATE_CURRENT)
+            PendingIntent.FLAG_UPDATE_CURRENT
+        )
 
         AlarmManagerCompat.setExactAndAllowWhileIdle(
             alarmManager!!,
@@ -100,13 +125,11 @@ class PeopleFragment : Fragment() {
             10000,
             pendingIntent
         )
-
-        return dataBinding.root
     }
 
+    // initialize the options menu
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.people_menu, menu)
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -119,10 +142,12 @@ class PeopleFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
+    /** this is helper method for test purpose to add a dummy data*/
     private fun addDummyData() {
         viewModel.AddDummyData()
     }
 
+    /** delete all the data in the people table */
     private fun deleteAllData() {
         MaterialAlertDialogBuilder(context)
             .setTitle(resources.getString(R.string.title))
