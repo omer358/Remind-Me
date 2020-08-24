@@ -2,7 +2,6 @@ package com.example.remindme.notifications
 
 import android.app.NotificationManager
 import android.content.Context
-import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Bitmap.createBitmap
 import android.graphics.Canvas
@@ -20,7 +19,8 @@ private const val NOTIFICATION_ID = 0
  * a helper extension function for showing the people as notification.
  * the function takes two parameters:
  * @param context
- * @param person represent the person we want to show.*/
+ * @param person represent the person we want to show.
+ * */
 fun NotificationManager.sendNotification(
     context:Context,
     person:People)
@@ -53,7 +53,8 @@ fun NotificationManager.sendNotification(
 
 /**
  * a helper extension function for creating a vector for the notification if
- * the current device is higher than API level 21*/
+ * the current device is higher than API level 21
+ * */
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.vectorToBitmap(drawableId: Int): Bitmap? {
     val drawable = getDrawable( drawableId) ?: return null

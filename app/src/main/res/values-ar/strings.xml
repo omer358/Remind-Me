@@ -30,4 +30,10 @@
     <string name="settings">الإعدادت</string>
     <string name="system_default_label">وضع النظام</string>
     <string name="light_mode_label">الوضع النهاري</string>
+    <string name="theme_category_title">السمات</string>
+    <string name="choose_theme_title">إختر وضع</string>
+    <string name="dummy_data_title">أضف بينات تجريبيه</string>
+    <string name="reminders_title_string">التنبيهات</string>
+    <string name="notification_title_string">إشعارات</string>
+    <string name="notification_summary_string">عرض إشعارات لمعارفك</string>
 </resources>
