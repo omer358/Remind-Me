@@ -22,7 +22,7 @@ class SettingFragment: PreferenceFragmentCompat() {
             findPreference<ListPreference>("themePref")
         if (themePreference != null) {
             themePreference.onPreferenceChangeListener =
-                Preference.OnPreferenceChangeListener { preference, newValue ->
+                Preference.OnPreferenceChangeListener { _, newValue ->
                     val themeOption = newValue as String
                     ThemeHelper.applyTheme(themeOption)
                     true
@@ -31,7 +31,7 @@ class SettingFragment: PreferenceFragmentCompat() {
         val notificationPreference = findPreference<SwitchPreferenceCompat>("omo")
         if (notificationPreference != null) {
             notificationPreference.onPreferenceChangeListener =
-                Preference.OnPreferenceChangeListener { preference, newValue ->
+                Preference.OnPreferenceChangeListener { _, newValue ->
                     val switch: Boolean = newValue as Boolean
                     if (switch) {
                         initializeTheAlarm()

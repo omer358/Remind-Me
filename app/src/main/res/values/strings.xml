@@ -36,4 +36,5 @@
     <string name="reminders_title_string">Reminders</string>
     <string name="notification_title_string">Notifications</string>
     <string name="notification_summary_string">showing notifications for your people</string>
+    <string name="notify_label_string">Notify</string>
 </resources>

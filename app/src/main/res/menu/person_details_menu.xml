@@ -10,6 +10,6 @@
     <item
         android:id="@+id/noitfication_item"
         android:icon="@drawable/ic_notification"
-        android:title="@string/Notify"
-        app:showAsAction="always" />
+        android:title="@string/notify_label_string"
+        app:showAsAction="ifRoom" />
 </menu>
