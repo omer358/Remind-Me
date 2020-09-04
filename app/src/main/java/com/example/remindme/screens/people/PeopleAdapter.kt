@@ -5,8 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.remindme.R
-import com.example.remindme.convertDateToPassedTime
+import com.example.remindme.utils.convertDateToPassedTime
 import com.example.remindme.database.People
 import com.example.remindme.databinding.PeopleListItemBinding
 
@@ -31,7 +30,8 @@ class PeopleAdapter(private val personClickListener: PersonClickListener) : List
         ) {
             binding.personNameItem.text = item.firstName + " " + item.secondName
             binding.imageItem.setImageResource(item.avatar)
-            binding.registerationTimeItem.text = convertDateToPassedTime(item.registrationTime)
+            binding.registerationTimeItem.text =
+                convertDateToPassedTime(item.registrationTime)
             binding.parent.setOnClickListener {
                 personClickListener.onclick(item)
             }

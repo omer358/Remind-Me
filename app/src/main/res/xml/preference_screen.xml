@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<PreferenceCategory
-    app:key="theme_category"
-    app:title="@string/theme_category_title">
-    <ListPreference
-        app:title="@string/choose_theme_title"
-        app:key="themePref"
-        app:defaultValue="default"
-        app:dialogTitle="@string/choose_theme_title"
-        app:entries="@array/themeListArray"
-        app:entryValues="@array/themeEntryArray"
-        app:useSimpleSummaryProvider="true"
-        />
-</PreferenceCategory>
+
+    <PreferenceCategory
+        android:icon="@drawable/ic_notification"
+        app:key="reminders_category"
+        app:title="@string/reminders_title_string">
+        <SwitchPreferenceCompat
+            android:key="omo"
+            android:summary="@string/notification_summary_string"
+            app:defaultValue="false"
+            app:title="@string/notification_title_string" />
+        <ListPreference
+            android:entries="@array/remindersListArray"
+            app:dialogTitle="how much reminder per a day?"
+            app:entryValues="@array/reminderEntryArray"
+            app:key="timer"
+            app:title="alarm"
+            app:summary="determine the frequent of the notification"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_baseline_theme_4_24"
+        app:key="theme_category"
+        app:title="@string/theme_category_title">
+        <ListPreference
+            app:defaultValue="default"
+            app:dialogTitle="@string/choose_theme_title"
+            app:entries="@array/themeListArray"
+            app:entryValues="@array/themeEntryArray"
+            app:key="themePref"
+
+            app:title="@string/choose_theme_title"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>

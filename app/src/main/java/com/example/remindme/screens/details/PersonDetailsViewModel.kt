@@ -10,7 +10,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.remindme.database.People
 import com.example.remindme.database.PeopleDao
-import com.example.remindme.sendNotification
+import com.example.remindme.notifications.sendNotification
 import kotlinx.coroutines.*
 
 class PersonDetailsViewModel(

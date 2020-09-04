@@ -12,7 +12,6 @@ interface PeopleDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(vararg people: People)
 
-
     @Update
     fun update (people: People)
 
@@ -24,6 +23,9 @@ interface PeopleDao {
 
     @Query("SELECT * FROM people_table ORDER BY id DESC")
     fun getAllPeople(): LiveData<List<People>>
+
+    @Query("SELECT * FROM people_table ORDER BY id DESC")
+    fun getAll(): List<People>
 
     @Query("DELETE FROM people_table WHERE id = :key")
     fun removePerson(key: Long)

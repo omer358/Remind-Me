@@ -1,6 +1,7 @@
-package com.example.remindme
+package com.example.remindme.utils
 
 import android.util.Log
+import com.example.remindme.R
 import com.example.remindme.database.People
 import com.example.remindme.screens.people.PeopleViewModel
 import java.text.SimpleDateFormat
@@ -51,7 +52,8 @@ fun selectFemaleVector(): Int{
         R.drawable.ic_f2,
         R.drawable.ic_f3,
         R.drawable.ic_f4,
-        R.drawable.ic_f5).shuffled()
+        R.drawable.ic_f5
+    ).shuffled()
     return vectors[0]
 }
 
@@ -61,7 +63,8 @@ fun selectMaleVector():Int{
         R.drawable.ic_m2,
         R.drawable.ic_m3,
         R.drawable.ic_m4,
-        R.drawable.ic_m5).shuffled()
+        R.drawable.ic_m5
+    ).shuffled()
     return vectors[0]
 }
 
