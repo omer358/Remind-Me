@@ -5,12 +5,16 @@ Remind me is a reminder app for people you have met, you add them to the app dat
 Screenshots
 -----------
 
-![](screenshots/listOfPeople.png "a list of people")
-![person details](screenshots/personDetails.png "Details for a specific person you added")
-![input form](screenshots/inputForm.png "add person form")
-![dark mode support](screenshots/dark-mode.png "dark mode")
 ![splash screen support](screenshots/splash-screen.png "splash screen")
+![](screenshots/listOfPeople.png "a list of people")
+![](screenshots/listOfPeopleD.png "a list of people in dark theme")
+![person details](screenshots/personDetails.png "Details for a specific person you added")
+![person details](screenshots/personDetailsD.png "Details for a specific person you added in dark theme")
+![input form](screenshots/inputForm.png "add person form")
 ![empty state](screenshots/empty-state.png "empty state")
+![notifications](screenshots/notification.png)
+![settings](screenshots/settings.png "settings screen person you added")
+![settings](screenshots/settingsD.png "settings screen in dark theme")
 
 Libraries Used
 --------------
@@ -27,6 +31,7 @@ Libraries Used
 * [UI][30] - Details on why and how to use UI Components in your apps - together or separate
   * [Animations & Transitions][31] - Move widgets and transition between screens.
   * [Fragment][34] - A basic unit of composable UI.
+* [Alarm Manager][33] = to schedule the notifications for the specified times.
 * Third party
   * [Kotlin Coroutines][91] for managing background threads with simplified code and reducing needs for callbacks
 
@@ -41,9 +46,4 @@ Libraries Used
 [31]: https://developer.android.com/training/animation/
 [34]: https://developer.android.com/guide/components/fragments
 [91]: https://kotlinlang.org/docs/reference/coroutines-overview.html
-
-Upcoming features
------------------
-updates will include notifications services.
-
-
+[33]: https://developer.android.com/training/scheduling/alarms
