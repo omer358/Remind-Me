@@ -37,4 +37,5 @@
     <string name="notification_title_string">Notifications</string>
     <string name="notification_summary_string">enable notifications for your people</string>
     <string name="notify_label_string">Notify</string>
+    <string name="main_notification_channel_name">"People reminders "</string>
 </resources>

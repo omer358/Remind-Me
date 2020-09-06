@@ -14,7 +14,7 @@
     <string name="female">أنثى</string>
     <string name="male">ذكر</string>
     <string name="error_message">لا يمكن أن يكون فارق!</string>
-    <string name="edit_person">Edit</string>
+    <string name="edit_person">تعديل</string>
     <string name="delete_all">مسح الكل</string>
     <string name="delete">حذف</string>
     <string name="cancel">إلغاء</string>
@@ -36,4 +36,6 @@
     <string name="reminders_title_string">التنبيهات</string>
     <string name="notification_title_string">إشعارات</string>
     <string name="notification_summary_string">عرض إشعارات لمعارفك</string>
+    <string name="notify_label_string">نبه</string>
+    <string name="main_notification_channel_name">منبه المعارف</string>
 </resources>

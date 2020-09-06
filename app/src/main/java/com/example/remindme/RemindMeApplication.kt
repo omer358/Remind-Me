@@ -4,10 +4,11 @@ import android.app.Application
 import androidx.preference.PreferenceManager
 import com.example.remindme.utils.ThemeHelper
 
-class DarkThemeApplication: Application() {
+class RemindMeApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+
         val sharedPreferences =
             PreferenceManager.getDefaultSharedPreferences(this)
         val themePref =
@@ -15,5 +16,9 @@ class DarkThemeApplication: Application() {
         if (themePref != null) {
             ThemeHelper.applyTheme(themePref)
         }
+    }
+
+    companion object {
+        private const val TAG = "RemindMeApplication"
     }
 }

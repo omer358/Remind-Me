@@ -4,9 +4,7 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.os.SystemClock
 import android.util.Log
 import android.widget.Toast
 import androidx.preference.*
@@ -72,16 +70,16 @@ class SettingFragment : PreferenceFragmentCompat() {
         val interval: Long = when (times.toInt()) {
             1 -> AlarmManager.INTERVAL_DAY
             2 -> AlarmManager.INTERVAL_HALF_DAY
-            3 -> 30000
+            3 -> AlarmManager.INTERVAL_DAY / 3
             else -> AlarmManager.INTERVAL_DAY
         }
         Log.i(TAG, "initializeTheAlarm: interval = $interval")
+
         val calendar: Calendar = Calendar.getInstance()
             .apply {
                 timeInMillis = System.currentTimeMillis()
-                add(Calendar.SECOND, 30)
+                add(Calendar.MINUTE, 30)
             }
-
         startTheAlarm(calendar, interval)
     }
 
