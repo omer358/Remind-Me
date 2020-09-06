@@ -2,20 +2,6 @@
 -----------
 Remind me is a reminder app for people you have met, you add them to the app database manually and then the app will send a notification to remind you of them.
 
-Screenshots
------------
-
-![splash screen support](screenshots/splash-screen.png "splash screen")
-![](screenshots/listOfPeople.png "a list of people")
-![](screenshots/listOfPeopleD.png "a list of people in dark theme")
-![person details](screenshots/personDetails.png "Details for a specific person you added")
-![person details](screenshots/personDetailsD.png "Details for a specific person you added in dark theme")
-![input form](screenshots/inputForm.png "add person form")
-![empty state](screenshots/empty-state.png "empty state")
-![notifications](screenshots/notification.png)
-![settings](screenshots/settings.png "settings screen person you added")
-![settings](screenshots/settingsD.png "settings screen in dark theme")
-
 Libraries Used
 --------------
 * [Architecture][10] - A collection of libraries that help you design robust, testable, and
@@ -34,6 +20,21 @@ Libraries Used
 * [Alarm Manager][33] = to schedule the notifications for the specified times.
 * Third party
   * [Kotlin Coroutines][91] for managing background threads with simplified code and reducing needs for callbacks
+
+
+Screenshots
+-----------
+
+![splash screen support](screenshots/splash-screen.png "splash screen")
+![](screenshots/listOfPeople.png "a list of people")
+![](screenshots/listOfPeopleD.png "a list of people in dark theme")
+![person details](screenshots/personDetails.png "Details for a specific person you added")
+![person details](screenshots/personDetailsD.png "Details for a specific person you added in dark theme")
+![input form](screenshots/inputForm.png "add person form")
+![empty state](screenshots/empty-state.png "empty state")
+![notifications](screenshots/notification.png)
+![settings](screenshots/settings.png "settings screen person you added")
+![settings](screenshots/settingsD.png "settings screen in dark theme")
 
 [10]: https://developer.android.com/jetpack/arch/
 [11]: https://developer.android.com/topic/libraries/data-binding/

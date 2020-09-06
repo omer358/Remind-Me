@@ -15,9 +15,10 @@
             android:entries="@array/remindersListArray"
             app:dialogTitle="how much reminder per a day?"
             app:entryValues="@array/reminderEntryArray"
-            app:key="timer"
+            app:key="schedule"
             app:title="alarm"
-            app:summary="determine the frequent of the notification"/>
+            app:defaultValue="1"
+            app:useSimpleSummaryProvider="true"/>
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -30,7 +31,6 @@
             app:entries="@array/themeListArray"
             app:entryValues="@array/themeEntryArray"
             app:key="themePref"
-
             app:title="@string/choose_theme_title"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>

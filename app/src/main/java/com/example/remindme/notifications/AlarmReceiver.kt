@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.widget.Toast
+import com.example.remindme.SettingFragment
 import com.example.remindme.database.People
 import com.example.remindme.database.PeopleDatabase
 import kotlinx.coroutines.CoroutineScope
@@ -31,22 +32,22 @@ class AlarmReceiver : BroadcastReceiver() {
      * get the data 'people' from the database.
      * @param context represent the current context and
      * we pass to the dataSource.*/
-    private fun getFromDataSource(context: Context?){
+    private fun getFromDataSource(context: Context?) {
         val scope = CoroutineScope(Dispatchers.IO)
         scope.launch {
             val dataSource = PeopleDatabase
                 .getInstance(context!!.applicationContext).peopleDao
-             var peopleList: List<People> = dataSource.getAll()
+            var peopleList: List<People> = dataSource.getAll()
 
-            sendNotification(context,peopleList)
+            sendNotification(context, peopleList)
         }
     }
 
-    /**
-     * use the extension function we created in NotificationUtils to show
+    /** use the extension function we created in NotificationUtils to show
      * a notification to the users.
      * @param context the current context of the application.
-     * @param peopleList represent the data we want to show.*/
+     * @param peopleList represent the data we want to show.
+     */
     private fun sendNotification(
         context: Context,
         peopleList: List<People>
