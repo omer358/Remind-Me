@@ -4,14 +4,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.example.remindme.R
-import com.example.remindme.utils.convertDateToPassedTime
 import com.example.remindme.database.People
+import com.example.remindme.utils.convertDateToPassedTime
 
 
 @BindingAdapter("personFullName")
 fun TextView.setFullName(item: People?) {
     item?.let {
-        text =item.firstName +" "+item.secondName
+        text = item.firstName + " " + item.secondName
     }
 }
 
@@ -45,7 +45,7 @@ fun TextView.setRegistrationTime(item: People?) {
 }
 
 @BindingAdapter("genderImage")
-fun ImageView.setGenderImage(item: People?){
+fun ImageView.setGenderImage(item: People?) {
     val gender = item?.gender
-    setImageResource(item?.avatar ?:R.drawable.ic_baseline_person_outline_24)
+    setImageResource(item?.avatar ?: R.drawable.ic_baseline_person_outline_24)
 }

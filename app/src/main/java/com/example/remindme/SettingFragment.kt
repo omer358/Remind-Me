@@ -78,7 +78,7 @@ class SettingFragment : PreferenceFragmentCompat() {
         val calendar: Calendar = Calendar.getInstance()
             .apply {
                 timeInMillis = System.currentTimeMillis()
-                add(Calendar.MINUTE, 30)
+                add(Calendar.SECOND, 30)
             }
         startTheAlarm(calendar, interval)
     }

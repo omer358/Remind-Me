@@ -67,6 +67,7 @@ class PeopleFragment : Fragment() {
         peopleViewModel.people.observe(viewLifecycleOwner, Observer {
             if (it.isEmpty()) {
                 showEmptyState()
+                dataBinding.parentLayout.setBackgroundColor(resources.getColor(R.color.emptyStateBackground))
 //                dataBinding.parentLayout.setBackgroundColor(Color.WHITE)
                 adapter.notifyDataSetChanged()
             } else {
@@ -89,8 +90,6 @@ class PeopleFragment : Fragment() {
                 peopleViewModel.onPersonDetailsNavigated()
             }
         })
-//        initializeTheAlarm()
-
         return dataBinding.root
     }
 

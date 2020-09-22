@@ -2,5 +2,8 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:drawable="@color/primaryColor" />
+    <item
+        android:drawable="@drawable/ic_avatar_1"
+        android:gravity="center" />
 
 </layer-list>

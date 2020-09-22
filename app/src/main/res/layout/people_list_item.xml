@@ -14,11 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="6dp"
         android:background="@color/secondaryLightColor"
-        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
         android:layout_marginEnd="8dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="3dp">
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -43,7 +45,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_item"
                 app:layout_constraintTop_toTopOf="@id/image_item"
-                tools:text="Maather Maki"/>
+                android:layout_marginLeft="8dp"
+                tools:text="Maather Maki" />
 
             <TextView
                 android:id="@+id/registeration_time_item"
@@ -54,7 +57,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="3w"/>
+                android:layout_marginRight="16dp"
+                tools:text="3w" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>
