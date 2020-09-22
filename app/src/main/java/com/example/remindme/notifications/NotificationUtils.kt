@@ -49,7 +49,7 @@ fun NotificationManager.sendNotification(
     val builder = NotificationCompat.Builder(context, PEOPLE_REMINDER_NOTIFICATION_CHANNEL_ID)
         .setSmallIcon(R.drawable.ic_avatar_1)
         .setContentTitle(person.firstName + " " + person.secondName)
-        .setContentText("Do you remember ${person.firstName}, you met him at ${person.place}")
+        .setContentText(fillContent(context, person))
         .setChannelId(PEOPLE_REMINDER_NOTIFICATION_CHANNEL_ID)
         .setColor(ContextCompat.getColor(context, R.color.primaryColor))
         .setDefaults(Notification.DEFAULT_SOUND)
@@ -67,6 +67,10 @@ fun NotificationManager.sendNotification(
         builder.setLargeIcon(bitmap)
     }
     notify(NOTIFICATION_ID, builder.build())
+}
+
+private fun fillContent(context: Context,person: People): String {
+    return context.getString(R.string.notification_messages,person.firstName,person.place)
 }
 
 @RequiresApi(Build.VERSION_CODES.O)

@@ -38,4 +38,7 @@
     <string name="notification_summary_string">enable notifications for your people</string>
     <string name="notify_label_string">Notify</string>
     <string name="main_notification_channel_name">"People reminders "</string>
+
+
+    <string name="notification_messages">Do you remember %1$s? you met him at %2$s .</string>
 </resources>

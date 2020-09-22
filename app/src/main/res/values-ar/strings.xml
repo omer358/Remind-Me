@@ -38,4 +38,5 @@
     <string name="notification_summary_string">عرض إشعارات لمعارفك</string>
     <string name="notify_label_string">نبه</string>
     <string name="main_notification_channel_name">منبه المعارف</string>
+    <string name="notification_messages">" هل تتذكر %1$s, لقد قابلته في %2$s"</string>
 </resources>
