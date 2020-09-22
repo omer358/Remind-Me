@@ -26,10 +26,10 @@ Screenshots
 -----------
 
 ![splash screen support](screenshots/splash-screen.png "splash screen")
-![](screenshots/listOfPeople.png "a list of people")
-![](screenshots/listOfPeopleD.png "a list of people in dark theme")
-![person details](screenshots/personDetails.png "Details for a specific person you added")
-![person details](screenshots/personDetailsD.png "Details for a specific person you added in dark theme")
+![](screenshots/list_of_people.png "a list of people")
+![](screenshots/list_of_people_d.png "a list of people in dark theme")
+![person details](screenshots/person_details.png "Details for a specific person you added")
+![person details](screenshots/person_details_d.png "Details for a specific person you added in dark theme")
 ![input form](screenshots/inputForm.png "add person form")
 ![empty state](screenshots/empty-state.png "empty state")
 ![notifications](screenshots/notification.png)
