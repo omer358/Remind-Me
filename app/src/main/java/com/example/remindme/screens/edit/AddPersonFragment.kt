@@ -20,6 +20,7 @@ import com.example.remindme.utils.selectFemaleVector
 import com.example.remindme.utils.selectMaleVector
 import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
+import java.util.*
 
 
 class AddPersonFragment : Fragment() {

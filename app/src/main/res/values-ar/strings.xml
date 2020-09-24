@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">تذكرني</string>
+    <string name="app_name">ذكِرني</string>
     <string name="first_name">اﻷسم اﻷول</string>
     <string name="second_name">اﻷسم الثاني</string>
     <string name="meeting_place">مكان الإلتقاء</string>
