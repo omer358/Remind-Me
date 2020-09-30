@@ -14,14 +14,18 @@
     </string-array>
 
     <string-array name="remindersListArray">
-        <item>Once a day</item>
-        <item>Twice a day</item>
-        <item>Three times a day</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>10</item>
     </string-array>
 
     <string-array name="reminderEntryArray">
         <item>1</item>
-        <item>2</item>
         <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>10</item>
     </string-array>
 </resources>

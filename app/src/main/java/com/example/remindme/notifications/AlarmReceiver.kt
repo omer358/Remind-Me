@@ -19,11 +19,11 @@ class AlarmReceiver : BroadcastReceiver() {
         context: Context?,
         intent: Intent?
     ) {
-        Toast.makeText(
-            context,
-            "BroadcastReceiver is Running...",
-            Toast.LENGTH_SHORT
-        ).show()
+//        Toast.makeText(
+//            context,
+//            "BroadcastReceiver is Running...",
+//            Toast.LENGTH_SHORT
+//        ).show()
 
         getFromDataSource(context)
     }

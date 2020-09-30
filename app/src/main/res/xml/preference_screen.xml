@@ -16,7 +16,7 @@
             app:dialogTitle="how much reminder per a day?"
             app:entryValues="@array/reminderEntryArray"
             app:key="schedule"
-            app:title="alarm"
+            app:title="@string/alarm_title_string"
             app:defaultValue="1"
             app:useSimpleSummaryProvider="true"/>
     </PreferenceCategory>

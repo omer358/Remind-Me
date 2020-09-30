@@ -31,7 +31,7 @@
     <string name="system_default_label">وضع النظام</string>
     <string name="light_mode_label">الوضع النهاري</string>
     <string name="theme_category_title">السمات</string>
-    <string name="choose_theme_title">إختر وضع</string>
+    <string name="choose_theme_title">التطبيق وضع</string>
     <string name="dummy_data_title">أضف بينات تجريبيه</string>
     <string name="reminders_title_string">التنبيهات</string>
     <string name="notification_title_string">إشعارات</string>
@@ -39,4 +39,5 @@
     <string name="notify_label_string">نبه</string>
     <string name="main_notification_channel_name">منبه المعارف</string>
     <string name="notification_messages">" هل تتذكر %1$s, لقد قابلته في %2$s"</string>
+    <string name="alarm_title_string">عدد التنبيهات في اليوم</string>
 </resources>

@@ -64,13 +64,13 @@ class AddPersonFragment : Fragment() {
     }
 
     private fun getData(): Boolean {
-        val firstName = dataBinding.etFirstName.text.toString().trim()
+        val firstName = dataBinding.etFirstName.text.toString().capitalize().trim()
         if (firstName == "") {
             dataBinding.etFirstName.error = getString(R.string.error_message)
             Log.e(TAG, getString(R.string.error_message))
             return false
         }
-        val secondName = dataBinding.etSecondName.text.toString().trim()
+        val secondName = dataBinding.etSecondName.text.toString().capitalize().trim()
         if (secondName == "") {
             dataBinding.etSecondName.error = getString(R.string.error_message)
             Log.e(TAG, getString(R.string.error_message))

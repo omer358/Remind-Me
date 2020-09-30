@@ -48,7 +48,7 @@ class SettingFragment : PreferenceFragmentCompat() {
                     } else {
                         cancelTheAlarm()
                         alarmPreference?.isEnabled = false
-                        Toast.makeText(context, "no notification!", Toast.LENGTH_SHORT).show()
+//                        Toast.makeText(context, "no notification!", Toast.LENGTH_SHORT).show()
                     }
                     true
                 }
@@ -69,8 +69,10 @@ class SettingFragment : PreferenceFragmentCompat() {
 
         val interval: Long = when (times.toInt()) {
             1 -> AlarmManager.INTERVAL_DAY
-            2 -> AlarmManager.INTERVAL_HALF_DAY
             3 -> AlarmManager.INTERVAL_DAY / 3
+            5-> AlarmManager.INTERVAL_DAY / 5
+            7-> AlarmManager.INTERVAL_DAY / 7
+            10-> AlarmManager.INTERVAL_DAY / 10
             else -> AlarmManager.INTERVAL_DAY
         }
         Log.i(TAG, "initializeTheAlarm: interval = $interval")
