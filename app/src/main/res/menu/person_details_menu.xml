@@ -7,9 +7,9 @@
         android:icon="@drawable/ic_baseline_delete_24"
         android:title="@string/delete_person"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/noitfication_item"
-        android:icon="@drawable/ic_notification"
-        android:title="@string/notify_label_string"
-        app:showAsAction="ifRoom" />
+<!--    <item-->
+<!--        android:id="@+id/noitfication_item"-->
+<!--        android:icon="@drawable/ic_notification"-->
+<!--        android:title="@string/notify_label_string"-->
+<!--        app:showAsAction="ifRoom" />-->
 </menu>

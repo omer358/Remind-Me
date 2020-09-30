@@ -132,7 +132,7 @@ class PeopleFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.dummy_data_menu_item -> addDummyData()
+//            R.id.dummy_data_menu_item -> addDummyData()
             R.id.delete_all_menu_item -> deleteAllData()
             R.id.setting_item -> this.findNavController()
                 .navigate(R.id.action_peopleFragment_to_settingFragment)

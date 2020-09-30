@@ -61,9 +61,9 @@ class PersonDetailsFragment : Fragment() {
             Log.i(TAG, "the delete Item has been selected!")
             showDeleteDialog()
         }
-        if (itemId == R.id.noitfication_item) {
-            personDetailsViewModel.startNotification()
-        }
+//        if (itemId == R.id.noitfication_item) {
+//            personDetailsViewModel.startNotification()
+//        }
         return super.onOptionsItemSelected(item)
     }
 
