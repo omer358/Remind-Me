@@ -19,6 +19,7 @@ import com.example.remindme.database.People
 
 private const val NOTIFICATION_ID = 0
 const val PEOPLE_REMINDER_NOTIFICATION_CHANNEL_ID = "people-reminder-id-channel"
+const val GROUP_KEY_REMINDER_NOTIFICATION = "reminder_group"
 
 /**
  * a helper extension function for showing the people as notification.
@@ -54,6 +55,7 @@ fun NotificationManager.sendNotification(
         .setColor(ContextCompat.getColor(context, R.color.primaryColor))
         .setDefaults(Notification.DEFAULT_SOUND)
         .setContentIntent(pendingIntent)
+        .setGroup(GROUP_KEY_REMINDER_NOTIFICATION)
         .setAutoCancel(true)
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN

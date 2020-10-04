@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.preference.*
 import com.example.remindme.notifications.AlarmReceiver
 import com.example.remindme.utils.ThemeHelper
@@ -71,8 +70,8 @@ class SettingFragment : PreferenceFragmentCompat() {
             1 -> AlarmManager.INTERVAL_DAY
             3 -> AlarmManager.INTERVAL_DAY / 3
             5-> AlarmManager.INTERVAL_DAY / 5
-            7-> AlarmManager.INTERVAL_DAY / 7
-            10-> AlarmManager.INTERVAL_DAY / 10
+            7 -> AlarmManager.INTERVAL_DAY / 7
+            10 -> AlarmManager.INTERVAL_DAY / 2400
             else -> AlarmManager.INTERVAL_DAY
         }
         Log.i(TAG, "initializeTheAlarm: interval = $interval")
