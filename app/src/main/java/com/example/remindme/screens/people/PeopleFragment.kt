@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import com.example.remindme.R
 import com.example.remindme.database.PeopleDatabase
@@ -77,19 +78,22 @@ class PeopleFragment : Fragment() {
             }
         })
 
+        // Nivgate to Add new Person Screen.
         dataBinding.fb.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_peopleFragment_to_addPersonFragment)
         }
 
+        // Naivgate to PersonDetails Screen to Show the Person Details.
         peopleViewModel.navigateToPersonDetails.observe(viewLifecycleOwner,
-            Observer {person ->
-            person?.let {
-                this.findNavController().navigate(
-                    PeopleFragmentDirections.actionPeopleFragmentToPersonDetailsFragment(person)
-                )
-                peopleViewModel.onPersonDetailsNavigated()
-            }
-        })
+            Observer { person ->
+                person?.let {
+                    val extras = FragmentNavigatorExtras()
+                    this.findNavController().navigate(
+                        PeopleFragmentDirections.actionPeopleFragmentToPersonDetailsFragment(person)
+                    )
+                    peopleViewModel.onPersonDetailsNavigated()
+                }
+            })
         return dataBinding.root
     }
 

@@ -40,13 +40,26 @@
                 android:id="@+id/person_name_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_item"
                 app:layout_constraintTop_toTopOf="@id/image_item"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginLeft="8dp"
                 tools:text="Maather Maki" />
+
+            <TextView
+                android:id="@+id/tv_person_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="16dp"
+                android:minEms="3"
+                app:layout_constraintStart_toEndOf="@id/image_item"
+                app:layout_constraintTop_toBottomOf="@id/person_name_item"
+                tools:text="She is Chemistry engineer" />
 
             <TextView
                 android:id="@+id/registeration_time_item"
