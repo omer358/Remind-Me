@@ -26,16 +26,23 @@ Libraries Used
 Screenshots
 -----------
 
-![splash screen support](screenshots/splash-screen.png "splash screen")
-![](screenshots/list_of_people.png "a list of people")
-![](screenshots/list_of_people_d.png "a list of people in dark theme")
-![person details](screenshots/person_details.png "Details for a specific person you added")
-![person details](screenshots/person_details_d.png "Details for a specific person you added in dark theme")
-![input form](screenshots/inputForm.png "add person form")
-![empty state](screenshots/empty-state.png "empty state")
-![notifications](screenshots/notification.png)
-![settings](screenshots/settings.png "settings screen person you added")
-![settings](screenshots/settingsD.png "settings screen in dark theme")
+| Splash Screen | Home Screen | 
+|    :---:     |     :---:      |  
+| <img src="screenshots/splash-screen.png" width="500">   | <img src="screenshots/list_of_people.png" width="500">   |
+
+| Person Details Screen | Person Details Screen In Dark Mode| 
+|    :---:     |     :---:      |  
+| <img src="screenshots/person_details.png" width="500">   | <img src="screenshots/person_details_d.png" width="500">   |
+
+| Input Form Screen Screen | Empty State Screen| 
+|    :---:     |     :---:      |  
+| <img src="screenshots/inputForm.png" width="500">   | <img src="screenshots/empty-state.png" width="500">   |
+
+| Notification Screen | Setting Screen| 
+|    :---:     |     :---:      |  
+| <img src="screenshots/notification.png" width="500">   | <img src="screenshots/settings.png" width="500">   |
+
+
 
 [10]: https://developer.android.com/jetpack/arch/
 [11]: https://developer.android.com/topic/libraries/data-binding/
